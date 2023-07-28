@@ -5,6 +5,7 @@
   
   $color-primary: #ff0101;
   $color-secondary: #fbfbfb;
+  $color-tertiary: #74798c;
   $white: #fff;
   $black: #020203;
   $grey: #f6f6f6;
@@ -37,8 +38,8 @@
   
   .container {
     position: relative;
-    width: calc(1698px - 120px);
-    height: calc(1698px - 90px);
+    // width: calc(1698px - 120px);
+    // height: calc(1698px - 90px);
     margin-left: 120px;
     padding: 70px 90px 85px 107px;
     color: $black;
