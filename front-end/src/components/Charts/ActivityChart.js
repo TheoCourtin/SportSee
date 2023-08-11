@@ -21,35 +21,35 @@ import {
  */
 
 const ActivityChart = () => {
-  // const { id } = useParams();
-  // const [data, setData] = useState([]);
+  const { id } = useParams();
+  const [data, setData] = useState([]);
 
-  // useEffect(() => {
-  //   const data = async () => {
-  //     const request = await getData("USER_ACTIVITY", parseInt(id));
-  //     if (!request) return alert("Error Chart Activity");
-  //     setData(request.data.sessions);
-  //   };
-  //   data();
-  // }, [id]);
+  useEffect(() => {
+    const data = async () => {
+      const request = await getData("USER_ACTIVITY", parseInt(id));
+      if (!request) return alert("Error Chart Activity");
+      setData(request.data.sessions);
+    };
+    data();
+  }, [id]);
 
-  // if (data.length === 0) return null;
+  if (data.length === 0) return null;
 
-  // for (let i = 0; i < data.length; i++) {
-  //   data[i].index = i + 1;
-  // }
+  for (let i = 0; i < data.length; i++) {
+    data[i].index = i + 1;
+  }
 
-  // const CustomTooltipActivity = ({ active, payload }) => {
-  //   if (active && payload && payload.length) {
-  //     return (
-  //       <div className="custom-tooltip">
-  //         <p>{payload[0].value}kg</p>
-  //         <p>{payload[1].value}kCal</p>
-  //       </div>
-  //     );
-  //   }
-  //   return null;
-  // };
+  const CustomTooltipActivity = ({ active, payload }) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="custom-tooltip">
+          <p>{payload[0].value}kg</p>
+          <p>{payload[1].value}kCal</p>
+        </div>
+      );
+    }
+    return null;
+  };
 
   return (
     <div className="chart-activity">
@@ -62,7 +62,7 @@ const ActivityChart = () => {
           <p>Calories Brûlées (kCal)</p>
         </div>
       </header>
-      {/* <ResponsiveContainer height={190}>
+      <ResponsiveContainer height={190}>
         <BarChart data={data} barGap={8} barCategoryGap={1}>
           <CartesianGrid vertical={false} strokeDasharray="1 1" />
           <XAxis
@@ -110,7 +110,7 @@ const ActivityChart = () => {
             radius={[50, 50, 0, 0]}
           />
         </BarChart>
-      </ResponsiveContainer> */}
+      </ResponsiveContainer>
     </div>
   );
 };

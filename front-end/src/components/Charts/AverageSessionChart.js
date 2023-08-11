@@ -51,7 +51,7 @@ const AverageSessionChart = () => {
     data();
   }, [id]);
 
-  if (data.length == undefined) return null;
+  if (data.length === undefined) return null;
 
   const CustomTooltipAverageSession = ({ active, payload }) => {
     if (active && payload && payload.length) {
@@ -71,7 +71,7 @@ const AverageSessionChart = () => {
           Durée moyenne des <br></br>sessions
         </h2>
       </div>
-      {/* <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer width="100%" height="100%">
         <LineChart
           data={data}
           margin={{ top: 0, left: 15, right: 15, bottom: 10 }}
@@ -106,7 +106,7 @@ const AverageSessionChart = () => {
             activeDot={{ r: 6 }}
           />
         </LineChart>
-      </ResponsiveContainer> */}
+      </ResponsiveContainer>
     </div>
   );
 };

@@ -50,7 +50,7 @@ const PerformanceChart = () => {
 
   return (
     <div className="chart-performance">
-      {/* <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer width="100%" height="100%">
         <RadarChart cx="50%" cy="50%" outerRadius="65%" data={data}>
           <PolarGrid gridType="polygon" />
           <PolarAngleAxis
@@ -67,7 +67,7 @@ const PerformanceChart = () => {
             fillOpacity={0.7}
           />
         </RadarChart>
-      </ResponsiveContainer> */}
+      </ResponsiveContainer>
     </div>
   );
 };
