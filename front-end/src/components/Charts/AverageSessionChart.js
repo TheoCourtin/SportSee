@@ -9,6 +9,7 @@ import {
   YAxis,
 } from "recharts";
 import { getData } from "../../data/services/getdata";
+import PropTypes from "prop-types";
 
 
 /**
@@ -111,6 +112,14 @@ const AverageSessionChart = () => {
   );
 };
 
+AverageSessionChart.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      day: PropTypes.number.isRequired,
+      sessionLength: PropTypes.number.isRequired,
+    })
+  ),
+};
 
 
 export default AverageSessionChart;

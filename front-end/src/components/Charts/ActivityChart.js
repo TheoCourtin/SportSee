@@ -11,7 +11,8 @@ import {
   Tooltip,
   Bar,
 } from "recharts";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
+
 
 /**
  * Returns React Component that displays a Activity Chart.
@@ -55,7 +56,7 @@ const ActivityChart = () => {
     <div className="chart-activity">
       <header>
         <div>
-          <h2 className="title">Activité quotidienne</h2>
+          <h2>Activité quotidienne</h2>
         </div>
         <div className="donnees">
           <p>Poids (kg)</p>
@@ -115,6 +116,15 @@ const ActivityChart = () => {
   );
 };
 
+ActivityChart.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      day: PropTypes.string.isRequired,
+      kilogram: PropTypes.number.isRequired,
+      calories: PropTypes.number.isRequired,
+    })
+  ),
+};
 
 
 export default ActivityChart;

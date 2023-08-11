@@ -5,13 +5,19 @@ import axios from "axios";
  * Documentation : https://axios-http.com/docs/instance
  */
 const api = axios.create({
-  baseURL: `http://localhost:3000`,
+  baseURL: `${process.env.REACT_APP_LOCALHOST_URL}`,
 });
+
+/**
+ * Class CallApi to collect data
+ * @param {number} id
+ * @returns {object} res
+ */
 
 export default class CallApi {
   static getInfos = async (id) => {
     try {
-      const res = await api.get(`http://localhost:3000/user/${id}`);
+      const res = await api.get(`${process.env.REACT_APP_LOCALHOST_URL}/user/${id}`);
       return res.data;
     } catch (err) {
       console.log(err);
@@ -20,7 +26,7 @@ export default class CallApi {
 
   static getActivity = async (id) => {
     try {
-      const res = await api.get(`http://localhost:3000/user/${id}/activity`);
+      const res = await api.get(`${process.env.REACT_APP_LOCALHOST_URL}/user/${id}/activity`);
       return res.data;
     } catch (err) {
       console.log(err);
@@ -29,7 +35,7 @@ export default class CallApi {
 
   static getPerformance = async (id) => {
     try {
-      const res = await api.get(`http://localhost:3000/user/${id}/performance`);
+      const res = await api.get(`${process.env.REACT_APP_LOCALHOST_URL}/user/${id}/performance`);
       return res.data;
     } catch (err) {
       console.log(err);
@@ -39,7 +45,7 @@ export default class CallApi {
   static getAverageSessions = async (id) => {
     try {
       const res = await api.get(
-        `http://localhost:3000/user/${id}/average-sessions`
+        `${process.env.REACT_APP_LOCALHOST_URL}/user/${id}/average-sessions`
       );
       return res.data;
     } catch (err) {

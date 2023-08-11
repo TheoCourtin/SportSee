@@ -1,4 +1,11 @@
 import React from "react";
+import PropTypes from "prop-types";
+
+/**
+ * Returns a React component displays the message on top dashboard
+ * @param {string}
+ * @returns a React Components
+ */
 
 const WelcomeUser = ({ name }) => {
   return (
@@ -9,6 +16,10 @@ const WelcomeUser = ({ name }) => {
       <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
     </section>
   );
+};
+
+WelcomeUser.propTypes = {
+  name: PropTypes.string,
 };
 
 export default WelcomeUser;

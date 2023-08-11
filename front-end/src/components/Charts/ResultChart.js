@@ -6,11 +6,14 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
+import PropTypes from "prop-types";
+
 /**
  * Returns React Component that displays a Result Chart
  * @param {data} in Dashboard
  * @returns A React component
  */
+
 
 const ResultChart = ({ data }) => {
   const result = data * 100;
@@ -43,6 +46,10 @@ const ResultChart = ({ data }) => {
       </ResponsiveContainer>
     </div>
   );
+};
+
+ResultChart.propTypes = {
+  data: PropTypes.number,
 };
 
 export default ResultChart;

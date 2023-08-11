@@ -4,6 +4,11 @@ import Card from "../components/Card";
 import Man from "../assets/users/man.jpg";
 import Woman from "../assets/users/woman.jpg";
 
+/**
+ * Returns a React component displays the Home page
+ * @returns a React Components
+ */
+
 const Home = () => {
   return (
     <main className="container home">

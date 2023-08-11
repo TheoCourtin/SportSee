@@ -4,7 +4,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    max-height: 90px;
+    // max-height: 90px;
     padding: 20px 30px;
     color: $white;
     background-color: $black;
@@ -12,7 +12,7 @@
     z-index: 1;
   
     .logo {
-      width: 150px;
+      width: 75px;
     }
     .header-nav {
       width: 100%;

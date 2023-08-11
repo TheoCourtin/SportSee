@@ -8,6 +8,7 @@ import {
   Radar,
 } from "recharts";
 import { getData } from "../../data/services/getdata";
+import PropTypes from "prop-types";
 
 
 /**
@@ -16,6 +17,7 @@ import { getData } from "../../data/services/getdata";
  * @params {number} id to useParams() methode
  * @returns A React component
  */
+
 const PerformanceChart = () => {
   const { id } = useParams();
   const [data, setData] = useState([]);
@@ -72,6 +74,14 @@ const PerformanceChart = () => {
   );
 };
 
+PerformanceChart.propTypes = {
+  data: PropTypes?.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.number.isRequired,
+      kind: PropTypes.number.isRequired,
+    })
+  ),
+};
 
 
 export default PerformanceChart;
