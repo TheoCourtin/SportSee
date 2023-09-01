@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getData } from "../data/services/getdata";
 // Components
-import Error from "./Error";
+// import Error from "./Error";
 import WelcomeUser from "../components/WelcomeUser";
 import Card from "../components/Card";
 // Charts
@@ -53,24 +53,28 @@ const Dashboard = () => {
             info={data.keyData?.calorieCount}
             unit="kCal"
             text="Calories"
+            iconClass="icon1"
           />
           <Card
             icon={iconProteines}
             info={data.keyData?.proteinCount}
             unit="g"
             text="Proteines"
+            iconClass="icon2"
           />
           <Card
             icon={iconGlucides}
             info={data.keyData?.carbohydrateCount}
             unit="g"
             text="Glucides"
+            iconClass="icon3"
           />
           <Card
             icon={iconLipides}
             info={data.keyData?.lipidCount}
             unit="g"
             text="Lipides"
+            iconClass="icon4"
           />
         </div>
       </section>

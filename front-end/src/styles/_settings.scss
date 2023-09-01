@@ -9,6 +9,12 @@
   $white: #fff;
   $black: #020203;
   $grey: #f6f6f6;
+  $background-blue-fond :rgba(74, 184, 255, 0.1);
+  $background-yellow-fond :rgba(249, 206, 35, 0.1);
+  $background-pink-fond: rgba(253, 81, 129, 0.1);
+  $background-red-fond:rgba(255, 0, 0, 0.07);
+
+
   
   @mixin verticalCenter {
     display: flex;

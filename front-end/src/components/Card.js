@@ -7,10 +7,13 @@ import PropTypes from "prop-types";
  * @returns a React Components
  */
 
-const Card = ({ icon, info, unit, text }) => {
+const Card = ({ icon, info, unit, text, iconClass }) => {
+
   return (
     <div className="card">
-      <img src={icon} alt="icon" />
+     <div className={`card-icon ${iconClass}`}>
+      <img  src={icon} alt="Icon" />
+      </div>
       <div className="content">
         <p className="info">{info}{unit}</p>
         <p className="text">{text}</p>
@@ -24,6 +27,7 @@ Card.propTypes = {
   info: PropTypes.number,
   unit: PropTypes.string,
   text: PropTypes.string,
+  iconClass: PropTypes.string,
 };
 
 
