@@ -26,7 +26,7 @@ const AverageSessionChart = () => {
   useEffect(() => {
     const data = async () => {
       const request = await getData("USER_AVERAGE_SESSIONS", parseInt(id));
-      if (!request) return alert("Error Average Session Chart");
+      // if (!request) return alert("Error Average Session Chart");
       const dayData = request.data.sessions.map((data) => {
         switch (data.day) {
           case 1:
@@ -62,7 +62,7 @@ const AverageSessionChart = () => {
         </div>
       );
     }
-    return null;
+    // return null;
   };
 
   return (

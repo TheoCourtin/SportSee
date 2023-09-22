@@ -11,7 +11,7 @@ import Woman from "../assets/users/woman.jpg";
 
 const Home = () => {
   return (
-    <main className="container home">
+    <main className="mainContainer home">
       <h1>
         Bienvenue sur <span>SportSee</span>
       </h1>

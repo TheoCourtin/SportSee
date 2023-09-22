@@ -13,6 +13,8 @@
     .bottom-charts {
       display: flex;
       gap: 30px;
+      flex-wrap: nowrap;
+      justify-content: space-between;
     }
     .keydata {
       width: 33%;
@@ -23,7 +25,11 @@
   }
 }
 
-@media screen and (max-width: 1400px) {
+
+
+
+
+@media screen and (max-width: 1400px) and (min-width: 768px)  {
   .dashboard {
     .statistique {
       flex-direction: column;
@@ -35,6 +41,34 @@
         flex-wrap: wrap;
         gap: 27px;
       }
+
+      
+    }
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 325px) {
+  .dashboard {
+    .statistique {
+     
+      display: block;
+
+      .keydata
+      {
+        display: inline-grid;
+      grid-template-columns: auto auto;
+      }
+      
+
+      .bottom-charts {
+        display: inline-grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        margin-bottom: 37px;
+        
+      }
+
+      
     }
   }
 }

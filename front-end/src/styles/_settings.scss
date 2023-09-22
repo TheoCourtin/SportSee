@@ -42,14 +42,12 @@
     text-decoration: none;
   }
   
-  .container {
+  .mainContainer {
     position: relative;
-    // width: calc(1698px - 120px);
-    // height: calc(1698px - 90px);
     margin-left: 120px;
     padding: 60px 0 0 100px;
     color: $black;
-    
+  
     a {
       color: $black;
     }
@@ -59,9 +57,23 @@
     }
   }
   
-  @media screen and (max-width: 1400px) {
-    .container {
-      padding: 50px 0 0 50px;
+  @media screen and (max-width: 1400px) and (min-width: 768px) {
+    .mainContainer {
+      
+      padding: 20px 0 0 0;
+      // width: 100px;
+      // height: 10px;
+    }
+  }
+
+  @media screen and (max-width: 767px) and (min-width: 325px) {
+    .mainContainer {
+      
+      padding: 20px 0 0 0;
+      // width: 100px;
+      // height: 10px;
+      margin-left: 74px;
+      
     }
   }
   

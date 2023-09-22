@@ -7,4 +7,36 @@
     background-color: #282d30;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.02);
     border-radius: 5px;
+
+   
   }
+
+ 
+
+  @media screen and (max-width: 1400px) and (min-width: 768px) {
+
+    .chart-performance{
+     width: 175px;
+     height: 175px;
+
+    tspan
+    {
+      font-size: 8px;
+    }
+
+    }
+   }
+
+   @media screen and (max-width: 767px) and (min-width: 325px) {
+
+    .chart-performance{
+     width: 100px;
+     height: 100px;
+
+    tspan
+    {
+      font-size: 8px;
+    }
+
+    }
+   }

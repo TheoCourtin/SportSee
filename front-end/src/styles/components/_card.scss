@@ -1,85 +1,185 @@
 .card {
-    width: 260px;
-    height: 124px;
-    display: flex;
-    align-items: center;
-    padding: 32px;
-    background-color: $color-secondary;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
-    border-radius: 5px;
+  width: 260px;
+  height: 124px;
+  display: flex;
+  align-items: center;
+  padding: 32px;
+  background-color: $color-secondary;
   
-    .icon1
-    {
-      display: flex;
-      width: 60px;
-      height: 60px;
-      margin: 20px;
-      border-radius: 6px;
-      justify-content: center;
-      align-items: center;
-      background-color: $background-red-fond;
-    }
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+  border-radius: 5px;
 
-    .icon2
-    {
-      display: flex;
-      width: 60px;
-      height: 60px;
-      margin: 20px;
-      border-radius: 6px;
-      justify-content: center;
-      align-items: center;
-      background-color: $background-blue-fond;
-    }
-
-    .icon3
-    {
-      display: flex;
-      width: 60px;
-      height: 60px;
-      margin: 20px;
-      border-radius: 6px;
-      justify-content: center;
-      align-items: center;
-      background-color: $background-yellow-fond;
-    }
-
-    .icon4
-    {
-      display: flex;
-      width: 60px;
-      height: 60px;
-      margin: 20px;
-      border-radius: 6px;
-      justify-content: center;
-      align-items: center;
-      background-color: $background-pink-fond;
-    }
-
-    img {
-      // position: relative;
-      // // height: 60px;
-      // // height: 60px;
-      // width: 200px;
-      // margin-right: 24px;
-      z-index: 2;
-    }
-
-   
-
-    
-
-   
-    .info {
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 30px;
-    }
-    .text {
-      font-size: 14px;
-      font-weight: 500;
-      color:$color-tertiary;
-    }
-
-    
+  .icon1 {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    background-color: $background-red-fond;
   }
+
+  .icon2 {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    background-color: $background-blue-fond;
+  }
+
+  .icon3 {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    background-color: $background-yellow-fond;
+  }
+
+  .icon4 {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    background-color: $background-pink-fond;
+  }
+
+  img {
+    // position: relative;
+    // // height: 60px;
+    // // height: 60px;
+    // width: 200px;
+    // margin-right: 24px;
+    z-index: 2;
+  }
+
+
+
+
+
+
+  .info {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+  }
+
+  .text {
+    font-size: 14px;
+    font-weight: 500;
+    color: $color-tertiary;
+  }
+
+
+}
+
+@media screen and (max-width: 1400px) and (min-width: 768px) {
+  .card {
+    width: 125px;
+    height: 50px;    
+    padding: 0;
+    // background-color: violet;
+
+    .icon1 {
+      width: 40px;
+      height: 40px;
+      // background-color: $background-blue-fond;
+    }
+
+    .icon2 {
+      width: 40px;
+      height: 40px;
+      // background-color: $background-blue-fond;
+    }
+
+    .icon3 {
+      width: 40px;
+      height: 40px;
+      // background-color: $background-blue-fond;
+    }
+
+    .icon4 {
+      width: 40px;
+      height: 40px;
+      // background-color: $background-blue-fond;
+    }
+
+    .info {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 10px;
+    }
+
+    .text {
+      font-size: 10px;
+      font-weight: 400;
+
+    }
+  }
+
+
+
+
+}
+
+@media screen and (max-width: 767px) and (min-width: 325px) {
+  .card {
+    width: 115px;
+    height: 30px;    
+    padding: 0;
+    // background-color: violet;
+
+    .icon1 {
+      width: 35px;
+      height: 35px;
+      margin : 7px;
+      // background-color: $background-blue-fond;
+    }
+
+    .icon2 {
+      width: 35px;
+      height: 35px;
+      margin : 7px;
+      // background-color: $background-blue-fond;
+    }
+
+    .icon3 {
+      width: 35px;
+      height: 35px;
+      margin : 7px;
+      // background-color: $background-blue-fond;
+    }
+
+    .icon4 {
+      width: 35px;
+      height: 35px;
+      margin : 7px;
+      // background-color: $background-blue-fond;
+    }
+
+    .info {
+      font-size: 8px;
+      font-weight: 400;
+      line-height: 10px;
+    }
+
+    .text {
+      font-size: 8px;
+      font-weight: 400;
+
+    }
+  }
+
+
+
+
+}

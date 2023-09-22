@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { redirect, useParams } from "react-router-dom";
 import { getData } from "../data/services/getdata";
 // Components
 // import Error from "./Error";
@@ -28,15 +28,19 @@ const Dashboard = () => {
 
   useEffect(() => {
     const data = async () => {
-      const request = await getData("USER_MAIN_DATA", parseInt(id));
-      if (!request) return alert("Accès à la requette API impossible");
+      const request = await getData("USER_MAIN_DATA", parseInt(id)); 
+      // console.log(request);     
+      if (!request) return window.location.href = "/oups";
+     
       setData(request.data);
     };
     data();
   }, [id]);
 
+ 
+
   return (
-    <main className="container dashboard">
+    <main className="mainContainer dashboard">
       <WelcomeUser name={data.userInfos?.firstName} />
       <section className="statistique">
         <div className="charts">

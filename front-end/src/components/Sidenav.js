@@ -14,23 +14,25 @@ const Sidenav = () => {
   const autoMajDate = new Date();
 
   return (
+  
     <aside className="sidenav">
       <nav className="nav">
         <Link to="/">
-          <img src={iconMeditation} alt="Icone méditation" />
+          <img className="image"  src={iconMeditation} alt="Icone méditation" />
         </Link>
         <Link to="/">
-          <img src={iconSwimming} alt="Icone natation" />
+          <img className="image"  src={iconSwimming} alt="Icone natation" />
         </Link>
         <Link to="/">
-          <img src={iconCycling} alt="Icone cyclisme" />
+          <img className="image"  src={iconCycling} alt="Icone cyclisme" />
         </Link>
         <Link to="/">
-          <img src={iconDumbbell} alt="Icone musculation" />
+          <img className="image"  src={iconDumbbell} alt="Icone musculation" />
         </Link>
       </nav>
       <p>© Copyright , SportSee {autoMajDate.getFullYear()}</p>
     </aside>
+    
   );
 };
 

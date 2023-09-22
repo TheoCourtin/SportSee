@@ -28,13 +28,13 @@ const ActivityChart = () => {
   useEffect(() => {
     const data = async () => {
       const request = await getData("USER_ACTIVITY", parseInt(id));
-      if (!request) return alert("Error Chart Activity");
+      // if (!request) return alert("Error Chart Activity");
       setData(request.data.sessions);
     };
     data();
   }, [id]);
 
-  if (data.length === 0) return null;
+  // if (data.length === 0) return null;
 
   for (let i = 0; i < data.length; i++) {
     data[i].index = i + 1;
@@ -49,7 +49,7 @@ const ActivityChart = () => {
         </div>
       );
     }
-    return null;
+    // return null;
   };
 
   return (

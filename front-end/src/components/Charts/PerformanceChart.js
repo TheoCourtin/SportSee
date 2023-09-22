@@ -25,7 +25,7 @@ const PerformanceChart = () => {
   useEffect(() => {
     const data = async () => {
       const request = await getData("USER_PERFORMANCE", parseInt(id));
-      if (!request) return alert("Error Perfomance Chart");
+      // if (!request) return alert("Error Perfomance Chart");
       const kindData = request.data.data.map((data) => {
         switch (data.kind) {
           case 1:
@@ -48,7 +48,7 @@ const PerformanceChart = () => {
     };
     data();
   }, [id]);
-  if (data.length === 0) return null;
+  // if (data.length === 0) return null;
 
   return (
     <div className="chart-performance">

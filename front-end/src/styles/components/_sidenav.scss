@@ -10,7 +10,7 @@
   width: 120px;
   background-color: $black;
 
-  
+
   .nav {
     display: flex;
     flex-direction: column;
@@ -35,5 +35,51 @@
     width: max-content;
     transform: rotate(270deg);
     color: $white;
+  }
+}
+
+@media screen and (max-width: 1400px) and (min-width: 768px) {
+
+  .sidenav {
+
+    width: 60px;
+    .nav {
+      a {
+
+        width: 32px;
+        height: 32px;
+        margin-bottom: 10px;
+
+        .image {
+          width: 20px;
+        }
+      }
+    }
+    p {
+      font-size: 10px;
+     }
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 325px) {
+
+  .sidenav {
+
+    width: 60px;
+    .nav {
+      a {
+
+        width: 32px;
+        height: 32px;
+        margin-bottom: 10px;
+
+        .image {
+          width: 20px;
+        }
+      }
+    }
+    p {
+      font-size: 10px;
+     }
   }
 }
