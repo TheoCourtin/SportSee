@@ -11,7 +11,6 @@ import {
 import { getData } from "../../data/services/getdata";
 import PropTypes from "prop-types";
 
-
 /**
  * Returns React Component that displays a Average Session Chart.
  * Fetch Data "USER_AVERAGE_SESSIONS"
@@ -27,7 +26,7 @@ const AverageSessionChart = () => {
     const data = async () => {
       const request = await getData("USER_AVERAGE_SESSIONS", parseInt(id));
       // if (!request) return alert("Error Average Session Chart");
-      const dayData = request.data.sessions.map((data) => {
+      const dayData = request.sessions.map((data) => {
         switch (data.day) {
           case 1:
             return { ...data, day: "L" };
@@ -83,7 +82,7 @@ const AverageSessionChart = () => {
             tickLine={false}
             axisLine={false}
             tick={{
-              fontSize: 12,
+              fontSize: 15,
               fontWeight: 500,
             }}
           />
@@ -120,6 +119,5 @@ AverageSessionChart.propTypes = {
     })
   ),
 };
-
 
 export default AverageSessionChart;

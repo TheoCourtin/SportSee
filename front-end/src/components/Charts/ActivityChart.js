@@ -13,7 +13,6 @@ import {
 } from "recharts";
 import PropTypes from "prop-types";
 
-
 /**
  * Returns React Component that displays a Activity Chart.
  * Fetch Data "USER_ACTIVITY"
@@ -29,7 +28,7 @@ const ActivityChart = () => {
     const data = async () => {
       const request = await getData("USER_ACTIVITY", parseInt(id));
       // if (!request) return alert("Error Chart Activity");
-      setData(request.data.sessions);
+      setData(request.sessions);
     };
     data();
   }, [id]);
@@ -125,6 +124,5 @@ ActivityChart.propTypes = {
     })
   ),
 };
-
 
 export default ActivityChart;

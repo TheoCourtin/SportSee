@@ -10,7 +10,12 @@ import Logo from "../assets/logo.png";
 const Navbar = () => {
   return (
     <header className="header">
-      <img className="logo" src={Logo} Sport Seealt="Logo Application SportSee" />
+      <img
+        className="logo"
+        src={Logo}
+        Sport
+        Seealt="Logo Application SportSee"
+      />
       <nav className="header-nav">
         <Link to="/">Accueil</Link>
         <Link to="/">Profil</Link>

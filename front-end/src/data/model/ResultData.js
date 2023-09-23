@@ -1,22 +1,19 @@
 class ResultData {
-    /**
-     * Creates a new ResultDataobject.
-     *
-     * @constructor
-     * @param {object} data - An object containing the user's activity data.
-     * @param {number} data.userId - The user's ID.
-     *  @param {number} data.userInfos
-     * @param {number} data.todayScore
-     * @param {number} data.keyData
-     */
-    constructor(data) {
-        
-       
-      this.id = data.userId; //identifiant de l'utilisateur
-      this.todayScore = data.todayScore;
-      this.userInfos = data.userInfos 
-      this.keyData = data.keyData; 
-      }
+  /**
+   * Creates a new ResultDataobject.
+   *
+   * @constructor
+   * @param {number} userId - The user's ID.
+   * @param {number} userInfos
+   * @param {number} todayScore
+   * @param {number} keyData
+   */
+  constructor(userId, userInfos, todayScore, keyData) {
+    this.userId = userId; //identifiant de l'utilisateur
+    this.todayScore = todayScore;
+    this.userInfos = userInfos;
+    this.keyData = keyData;
   }
+}
 
-  export default ResultData;
+export default ResultData;

@@ -14,7 +14,6 @@ import PropTypes from "prop-types";
  * @returns A React component
  */
 
-
 const ResultChart = ({ data }) => {
   const result = data * 100;
 

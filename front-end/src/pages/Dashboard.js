@@ -28,16 +28,14 @@ const Dashboard = () => {
 
   useEffect(() => {
     const data = async () => {
-      const request = await getData("USER_MAIN_DATA", parseInt(id)); 
-      // console.log(request);     
-      if (!request) return window.location.href = "/oups";
-     
-      setData(request.data);
+      const request = await getData("USER_MAIN_DATA", parseInt(id));
+      // console.log(request);
+      if (!request) return (window.location.href = "/oups");
+
+      setData(request);
     };
     data();
   }, [id]);
-
- 
 
   return (
     <main className="mainContainer dashboard">
@@ -54,7 +52,7 @@ const Dashboard = () => {
         <div className="keydata">
           <Card
             icon={iconCalories}
-            info={data.keyData?.calorieCount}
+            info={data?.keyData?.calorieCount}
             unit="kCal"
             text="Calories"
             iconClass="icon1"

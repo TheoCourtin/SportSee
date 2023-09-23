@@ -5,7 +5,7 @@
   align-items: center;
   padding: 32px;
   background-color: $color-secondary;
-  
+
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
   border-radius: 5px;
 
@@ -85,7 +85,7 @@
 @media screen and (max-width: 1400px) and (min-width: 768px) {
   .card {
     width: 125px;
-    height: 50px;    
+    height: 50px;
     padding: 0;
     // background-color: violet;
 
@@ -134,35 +134,35 @@
 @media screen and (max-width: 767px) and (min-width: 325px) {
   .card {
     width: 115px;
-    height: 30px;    
+    height: 30px;
     padding: 0;
     // background-color: violet;
 
     .icon1 {
       width: 35px;
       height: 35px;
-      margin : 7px;
+      margin: 7px;
       // background-color: $background-blue-fond;
     }
 
     .icon2 {
       width: 35px;
       height: 35px;
-      margin : 7px;
+      margin: 7px;
       // background-color: $background-blue-fond;
     }
 
     .icon3 {
       width: 35px;
       height: 35px;
-      margin : 7px;
+      margin: 7px;
       // background-color: $background-blue-fond;
     }
 
     .icon4 {
       width: 35px;
       height: 35px;
-      margin : 7px;
+      margin: 7px;
       // background-color: $background-blue-fond;
     }
 

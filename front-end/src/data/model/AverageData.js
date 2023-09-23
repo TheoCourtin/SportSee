@@ -1,18 +1,15 @@
 class AverageData {
-    /**
-     * Creates a new AverageData object.
-     *
-     * @constructor
-     * @param {object} data - An object containing the user's activity data.
-     * @param {number} data.userId - The user's ID.
-     * @param {object} data.sessions 
-     */
-    constructor(data) {
-        
-       
-      this.id = data.userId; //identifiant de l'utilisateur
-      this.sessions = data.sessions; 
-      }
+  /**
+   * Creates a new AverageData object.
+   *
+   * @constructor *
+   * @param {number} userId - The user's ID.
+   * @param {object} sessions
+   */
+  constructor(userId, sessions) {
+    this.userId = userId; //identifiant de l'utilisateur
+    this.sessions = sessions;
   }
+}
 
-  export default AverageData;
+export default AverageData;

@@ -10,7 +10,6 @@ import {
 import { getData } from "../../data/services/getdata";
 import PropTypes from "prop-types";
 
-
 /**
  * Returns React Component that displays a Perfomance Chart.
  * Fetch Data "USER_PERFORMANCE"
@@ -26,7 +25,7 @@ const PerformanceChart = () => {
     const data = async () => {
       const request = await getData("USER_PERFORMANCE", parseInt(id));
       // if (!request) return alert("Error Perfomance Chart");
-      const kindData = request.data.data.map((data) => {
+      const kindData = request.kind.map((data) => {
         switch (data.kind) {
           case 1:
             return { ...data, kind: "Cardio" };
@@ -82,6 +81,5 @@ PerformanceChart.propTypes = {
     })
   ),
 };
-
 
 export default PerformanceChart;

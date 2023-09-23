@@ -11,16 +11,14 @@ const App = () => {
   return (
     <BrowserRouter>
       <Navbar />
-      
+
       <Sidenav />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/user/:id" element={<Dashboard />} />
         <Route path="/oups" element={<Oups />} />
         <Route path="*" element={<Error />} />
-        
       </Routes>
-     
     </BrowserRouter>
   );
 };

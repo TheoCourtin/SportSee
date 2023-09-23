@@ -8,14 +8,16 @@ import PropTypes from "prop-types";
  */
 
 const Card = ({ icon, info, unit, text, iconClass }) => {
-
   return (
     <div className="card">
-     <div className={`card-icon ${iconClass}`}>
-      <img  src={icon} alt="Icon" />
+      <div className={`card-icon ${iconClass}`}>
+        <img src={icon} alt="Icon" />
       </div>
       <div className="content">
-        <p className="info">{info}{unit}</p>
+        <p className="info">
+          {info}
+          {unit}
+        </p>
         <p className="text">{text}</p>
       </div>
     </div>
@@ -24,11 +26,10 @@ const Card = ({ icon, info, unit, text, iconClass }) => {
 
 Card.propTypes = {
   icon: PropTypes.string,
-  info: PropTypes.number,
+  info: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   unit: PropTypes.string,
   text: PropTypes.string,
   iconClass: PropTypes.string,
 };
-
 
 export default Card;
