@@ -26,6 +26,7 @@ const PerformanceChart = () => {
       const request = await getData("USER_PERFORMANCE", parseInt(id));
       // if (!request) return alert("Error Perfomance Chart");
       const kindData = request.kind.map((data) => {
+        
         switch (data.kind) {
           case 1:
             return { ...data, kind: "Cardio" };

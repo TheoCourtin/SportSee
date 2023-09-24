@@ -278,7 +278,8 @@ export default class MockData {
       res?.data?.data?.id,
       res?.data?.data?.userInfos,
       res?.data?.data?.todayScore,
-      res?.data?.data?.keyData
+      res?.data?.data?.keyData,
+      res?.data?.data?.Score
     );
     return { data: resultat };
   };
@@ -301,10 +302,6 @@ export default class MockData {
       res?.data?.data?.kind,
       res?.data?.data?.data
     );
-    performance.kind = performance.kind
-      .sort((a, b) => a.kind - b.kind)
-      .reverse();
-
     return { data: performance };
   };
 

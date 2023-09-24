@@ -1,4 +1,4 @@
-class PerformanceData {
+export default class PerformanceData {
   /**
    * Creates a new PerformanceData object.
    *
@@ -11,7 +11,6 @@ class PerformanceData {
     this.userId = userId; //identifiant de l'utilisateur
     this.kind = kind;
     this.data = data;
+    this.kind.sort((a, b) => a.kind - b.kind).reverse();
   }
 }
-
-export default PerformanceData;
